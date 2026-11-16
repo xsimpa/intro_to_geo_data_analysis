@@ -28,13 +28,13 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=9c3e77be" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.11b39860a7a0cbfd473a3ad8a317855267ff0bd372690045ca344a6b62be495e.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css?v=be8a1c11" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
-    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css?v=982b99e0" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -51,7 +51,7 @@
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js?v=1ae7504c"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script src="../_static/design-tabs.js?v=f930bc37"></script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
@@ -66,7 +66,7 @@
     <link rel="prev" title="Computations with numpy" href="02-computations_numpy.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Nov 12, 2026"/>
+    <meta name="docbuild:last-update" content="Nov 16, 2026"/>
   </head>
   
   
@@ -151,8 +151,14 @@
   
   
   
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Introduction to Programming for Geosciences - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Introduction to Programming for Geosciences - Home"/>`);</script>
   
-    <p class="title logo__title">Introduction to Programming for Geosciences</p>
   
 </a></div>
         <div class="sidebar-primary-item">
@@ -507,8 +513,8 @@ ARGO floats are autonomous robotic instruments that collect Temperature, Salinit
 The following code will give you a list of <code class="docutils literal notranslate"><span class="pre">.npy</span></code> files that you can open in the next step.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pooch</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span> 
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pooch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span> 
 
 <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://github.com/HamedAlemo/advanced-geo-python/raw/refs/heads/main/files/float_data_4901412.zip&quot;</span>
 <span class="n">files</span> <span class="o">=</span> <span class="n">pooch</span><span class="o">.</span><span class="n">retrieve</span><span class="p">(</span><span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">processor</span><span class="o">=</span><span class="n">pooch</span><span class="o">.</span><span class="n">Unzip</span><span class="p">(),</span> <span class="n">known_hash</span><span class="o">=</span><span class="s2">&quot;2a703c720302c682f1662181d329c9f22f9f10e1539dc2d6082160a469165009&quot;</span><span class="p">)</span>
@@ -517,17 +523,14 @@ The following code will give you a list of <code class="docutils literal notrans
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\simoe\miniforge3\envs\maps\lib\site-packages\tqdm\auto.py:21: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
-  from .autonotebook import tqdm as notebook_tqdm
-</pre></div>
-</div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;C:\\Users\\simoe\\AppData\\Local\\pooch\\pooch\\Cache\\6d802b1e083b1a058f3fbf91228d7758-float_data_4901412.zip.unzip\\float_data\\date.npy&#39;,
- &#39;C:\\Users\\simoe\\AppData\\Local\\pooch\\pooch\\Cache\\6d802b1e083b1a058f3fbf91228d7758-float_data_4901412.zip.unzip\\float_data\\lat.npy&#39;,
- &#39;C:\\Users\\simoe\\AppData\\Local\\pooch\\pooch\\Cache\\6d802b1e083b1a058f3fbf91228d7758-float_data_4901412.zip.unzip\\float_data\\levels.npy&#39;,
- &#39;C:\\Users\\simoe\\AppData\\Local\\pooch\\pooch\\Cache\\6d802b1e083b1a058f3fbf91228d7758-float_data_4901412.zip.unzip\\float_data\\lon.npy&#39;,
- &#39;C:\\Users\\simoe\\AppData\\Local\\pooch\\pooch\\Cache\\6d802b1e083b1a058f3fbf91228d7758-float_data_4901412.zip.unzip\\float_data\\P.npy&#39;,
- &#39;C:\\Users\\simoe\\AppData\\Local\\pooch\\pooch\\Cache\\6d802b1e083b1a058f3fbf91228d7758-float_data_4901412.zip.unzip\\float_data\\S.npy&#39;,
- &#39;C:\\Users\\simoe\\AppData\\Local\\pooch\\pooch\\Cache\\6d802b1e083b1a058f3fbf91228d7758-float_data_4901412.zip.unzip\\float_data\\T.npy&#39;]
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">pooch</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span> 
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://github.com/HamedAlemo/advanced-geo-python/raw/refs/heads/main/files/float_data_4901412.zip&quot;</span>
+
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;pooch&#39;
 </pre></div>
 </div>
 </div>
@@ -677,7 +680,7 @@ By Patric Simões Pereira
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Nov 12, 2026.
+  Last updated on Nov 16, 2026.
   <br/>
 </p>
   </div>

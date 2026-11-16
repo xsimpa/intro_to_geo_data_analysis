@@ -58,7 +58,7 @@ At the end of the semester, you will be given a programming project to realize o
 
 **Mid-term exam**
 
-The mid-term exam (~1h, written or OLAT-exam with presence in class) will take place on **Tue 24-11-2026 at 10h15**.
+The mid-term exam (~1h, written or OLAT-exam with presence in class) will take place on **Tue 01-12-2026 at 10h15**.
 
 **Exam**
 
@@ -77,10 +77,10 @@ The first half of the class will will teach us most of the fundamentals. Towards
 - Lecture 03 (10-11-2026) - Basic Syntax (cont´)
 
 - Lecture 04 (17-11-2026) - Lecture 04 - Numerical Python (Numpy)
-
-**Mid-term exam (24-11-2026)**
       
-- Lecture 05 (01-11-2026) - Visualizing with Matplotlib
+- Lecture 05 (24-11-2026) - Visualizing with Matplotlib
+
+**Mid-term exam (01-12-2026)**
       
 - Lecture 06 (17-11-2026) - Pandas
 
