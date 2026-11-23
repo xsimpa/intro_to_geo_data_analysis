@@ -66,7 +66,7 @@
     <link rel="prev" title="Assignment 03" href="../lecture_04-numpy/Assignment_03.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Nov 16, 2026"/>
+    <meta name="docbuild:last-update" content="Nov 23, 2026"/>
   </head>
   
   
@@ -229,7 +229,6 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Plotting data with matplotlib</a></li>
 <li class="toctree-l1"><a class="reference internal" href="02-multidim-numpy.html">Multi-dimensional data with numpy and matplotlib</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Assignment_04.html">Assignment 04</a></li>
 </ul>
 
     </div>
@@ -515,7 +514,7 @@ document.write(`
 </section>
 <section id="installing-matplotlib">
 <h3>Installing matplotlib<a class="headerlink" href="#installing-matplotlib" title="Link to this heading">#</a></h3>
-<p>Make sure you have followed <a class="reference internal" href="#01-install-packages"><span class="xref myst">my instructions</span></a> before going on.</p>
+<p>Make sure you have followed <a class="reference internal" href="../lecture_01-welcome/05-Environments.html"><span class="std std-doc">my instructions</span></a> before going on.</p>
 </section>
 <section id="how-to-import-matplotlib">
 <h3>How to import matplotlib<a class="headerlink" href="#how-to-import-matplotlib" title="Link to this heading">#</a></h3>
@@ -583,7 +582,7 @@ document.write(`
 <span class="ne">NameError</span>: name &#39;x&#39; is not defined
 </pre></div>
 </div>
-<img alt="../_images/33591efa9564a66f129f6ec32a0f5b5c19f44e60783ea04c1d8c7ee72fba24dd.png" src="../_images/33591efa9564a66f129f6ec32a0f5b5c19f44e60783ea04c1d8c7ee72fba24dd.png" />
+<img alt="../_images/8852035462ddaea257dd94f8f88f277b0993cb5e85d77d5a256d5d65b3ca98dc.png" src="../_images/8852035462ddaea257dd94f8f88f277b0993cb5e85d77d5a256d5d65b3ca98dc.png" />
 </div>
 </div>
 <p><strong>Exercise: write a simple python script (not a notebook) reproducing the plot above. Run the code with and without <code class="docutils literal notranslate"><span class="pre">plt.show()</span></code> at the end.</strong></p>
@@ -686,7 +685,7 @@ document.write(`
 <span class="ne">NameError</span>: name &#39;x&#39; is not defined
 </pre></div>
 </div>
-<img alt="../_images/ca861b6fcf879d6770bfa2feaea84ef1e23545145600f5acda16090fcf4af74e.png" src="../_images/ca861b6fcf879d6770bfa2feaea84ef1e23545145600f5acda16090fcf4af74e.png" />
+<img alt="../_images/a71d429e14770378e7c03e128679ad89294dccb952f5fd8663d02a4796066d48.png" src="../_images/a71d429e14770378e7c03e128679ad89294dccb952f5fd8663d02a4796066d48.png" />
 </div>
 </div>
 <ul class="simple">
@@ -769,7 +768,7 @@ document.write(`
 <span class="ne">NameError</span>: name &#39;x&#39; is not defined
 </pre></div>
 </div>
-<img alt="../_images/8aed5667a8b0dcae466e0d7337d111ec556cbab6b0a48f0cefd23ec2e1b5dfb5.png" src="../_images/8aed5667a8b0dcae466e0d7337d111ec556cbab6b0a48f0cefd23ec2e1b5dfb5.png" />
+<img alt="../_images/704a421b972f3adfdd593456f0451e88539bdc428864fb4923015059a10d2f34.png" src="../_images/704a421b972f3adfdd593456f0451e88539bdc428864fb4923015059a10d2f34.png" />
 </div>
 </div>
 </section>
@@ -811,7 +810,7 @@ document.write(`
 <span class="ne">NameError</span>: name &#39;x&#39; is not defined
 </pre></div>
 </div>
-<img alt="../_images/33591efa9564a66f129f6ec32a0f5b5c19f44e60783ea04c1d8c7ee72fba24dd.png" src="../_images/33591efa9564a66f129f6ec32a0f5b5c19f44e60783ea04c1d8c7ee72fba24dd.png" />
+<img alt="../_images/8852035462ddaea257dd94f8f88f277b0993cb5e85d77d5a256d5d65b3ca98dc.png" src="../_images/8852035462ddaea257dd94f8f88f277b0993cb5e85d77d5a256d5d65b3ca98dc.png" />
 </div>
 </div>
 </section>
@@ -858,7 +857,7 @@ document.write(`
 <span class="ne">NameError</span>: name &#39;x&#39; is not defined
 </pre></div>
 </div>
-<img alt="../_images/33591efa9564a66f129f6ec32a0f5b5c19f44e60783ea04c1d8c7ee72fba24dd.png" src="../_images/33591efa9564a66f129f6ec32a0f5b5c19f44e60783ea04c1d8c7ee72fba24dd.png" />
+<img alt="../_images/8852035462ddaea257dd94f8f88f277b0993cb5e85d77d5a256d5d65b3ca98dc.png" src="../_images/8852035462ddaea257dd94f8f88f277b0993cb5e85d77d5a256d5d65b3ca98dc.png" />
 </div>
 </div>
 <p><a class="reference external" href="https://matplotlib.org/3.5.0/api/figure_api.html?highlight=savefig#matplotlib.figure.Figure.savefig">figure.savefig</a> has several options available. The first position argument <code class="docutils literal notranslate"><span class="pre">fname</span></code> indicates the path to the file to write (default is is the current working folder) and its format (e.g. <code class="docutils literal notranslate"><span class="pre">.png</span></code>, <code class="docutils literal notranslate"><span class="pre">.pdf</span></code> or <code class="docutils literal notranslate"><span class="pre">.eps</span></code>). The other two arguments are setting the resolution the final image and whether to have margins around the figure (I often use <code class="docutils literal notranslate"><span class="pre">bbox_inches='tight'</span></code>).</p>
@@ -987,7 +986,7 @@ By Patric Simões Pereira
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Nov 16, 2026.
+  Last updated on Nov 23, 2026.
   <br/>
 </p>
   </div>

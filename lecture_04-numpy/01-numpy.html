@@ -66,7 +66,7 @@
     <link rel="prev" title="Assignment 02" href="../lecture_03-basics2/Assignment_02.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Nov 16, 2026"/>
+    <meta name="docbuild:last-update" content="Nov 23, 2026"/>
   </head>
   
   
@@ -229,7 +229,6 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../lecture_05-matplotlib/01-matplotlib.html">Plotting data with matplotlib</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lecture_05-matplotlib/02-multidim-numpy.html">Multi-dimensional data with numpy and matplotlib</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lecture_05-matplotlib/Assignment_04.html">Assignment 04</a></li>
 </ul>
 
     </div>
@@ -501,7 +500,7 @@ document.write(`
 <h1>Introduction to scientific python: numpy and matplotlib<a class="headerlink" href="#introduction-to-scientific-python-numpy-and-matplotlib" title="Link to this heading">#</a></h1>
 <p>After a few weeks at learning programming, you may have noticed already that computers are quite good at manipulating numbers. The python language is helping us at it, by providing an interface between us and “the machine”. However, we are going to see that the language needs a little bit of “extra help” to become truly useful for us scientists.</p>
 <p>This help comes with the scientific python ecosystem: in the front line, <a class="reference external" href="https://numpy.org">numpy</a> and <a class="reference external" href="https://matplotlib.org/">matplotlib</a>!</p>
-<p><strong>I strongly recommend to download this notebook, run the examples yourself and play with it on your computer as you go through this unit</strong> (see the <a class="reference internal" href="#02-jupyter-dos"><span class="xref myst">explanation video</span></a>).</p>
+<p><strong>I strongly recommend to download this notebook, run the examples yourself and play with it on your computer as you go through this unit</strong>).</p>
 <p><em>Copyright note: many parts of this lesson are taken from the excellent <a class="reference external" href="https://numpy.org/doc/stable/user/absolute_beginners.html">numpy for beginners</a> tutorial.</em></p>
 <section id="numpy">
 <h2>NumPy<a class="headerlink" href="#numpy" title="Link to this heading">#</a></h2>
@@ -553,6 +552,14 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </section>
 <section id="how-to-import-numpy">
 <h3>How to import NumPy<a class="headerlink" href="#how-to-import-numpy" title="Link to this heading">#</a></h3>
+<p>First, you will have to install the Numpy package into your environment (remove dash if needed):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># pip install numpy</span>
+</pre></div>
+</div>
+</div>
+</div>
 <p>To access NumPy and its functions import it in your Python code like this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -569,7 +576,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 <p>There are many ways to create an array, and one of the simplest is by converting a Python list to a NumPy array:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mf">5.</span><span class="p">,</span> <span class="mi">6</span><span class="p">])</span>
 </pre></div>
 </div>
 </div>
@@ -581,7 +588,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1, 2, 3, 4, 5, 6])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([1., 2., 3., 4., 5., 6.])
 </pre></div>
 </div>
 </div>
@@ -608,7 +615,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dtype(&#39;int64&#39;)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>dtype(&#39;float64&#39;)
 </pre></div>
 </div>
 </div>
@@ -703,12 +710,12 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 <p>You can create an array with a range of elements:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0, 1, 2, 3])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
 </pre></div>
 </div>
 </div>
@@ -819,7 +826,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 7,  5,  4,  9,  1,  2, 14,  8,  3, 11,  6, 12, 13, 10])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([12, 14,  4,  7,  6, 11,  1, 10,  8,  3, 13,  9,  2,  5])
 </pre></div>
 </div>
 </div>
@@ -833,7 +840,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([5, 4, 1, 2, 3])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([4, 1, 3, 2, 5])
 </pre></div>
 </div>
 </div>
@@ -854,8 +861,8 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([False,  True,  True, False,  True,  True, False, False,  True,
-       False, False, False, False, False])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([False, False,  True, False, False, False,  True, False, False,
+        True, False, False,  True,  True])
 </pre></div>
 </div>
 </div>
@@ -869,7 +876,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([5, 4, 1, 2, 3])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([4, 1, 3, 2, 5])
 </pre></div>
 </div>
 </div>
@@ -883,7 +890,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([5, 4, 1, 2, 3])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([4, 1, 3, 2, 5])
 </pre></div>
 </div>
 </div>
@@ -898,7 +905,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 7,  5,  4,  9,  8,  3,  6, 10])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([ 4,  7,  6, 10,  8,  3,  9,  5])
 </pre></div>
 </div>
 </div>
@@ -918,7 +925,7 @@ NumPy <strong>efficient calculations</strong> with arrays and matrices and it su
 </div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">ValueError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">28</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">29</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
 <span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="kc">True</span> <span class="o">|</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span> <span class="ow">or</span> <span class="kc">False</span><span class="p">)</span>  <span class="c1"># These two are equivalent with boolean scalars</span>
 <span class="ne">----&gt; </span><span class="mi">2</span> <span class="nb">print</span><span class="p">((</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="mi">11</span><span class="p">),</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">a</span> <span class="o">&lt;</span> <span class="mi">11</span><span class="p">))</span>  <span class="c1"># On numpy arrays, the second one will raise an error</span>
 
@@ -1159,7 +1166,7 @@ By Patric Simões Pereira
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Nov 16, 2026.
+  Last updated on Nov 23, 2026.
   <br/>
 </p>
   </div>

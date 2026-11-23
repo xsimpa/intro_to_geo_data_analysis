@@ -66,7 +66,7 @@
     <link rel="prev" title="Computations with numpy" href="02-computations_numpy.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Nov 16, 2026"/>
+    <meta name="docbuild:last-update" content="Nov 23, 2026"/>
   </head>
   
   
@@ -229,7 +229,6 @@
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../lecture_05-matplotlib/01-matplotlib.html">Plotting data with matplotlib</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lecture_05-matplotlib/02-multidim-numpy.html">Multi-dimensional data with numpy and matplotlib</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lecture_05-matplotlib/Assignment_04.html">Assignment 04</a></li>
 </ul>
 
     </div>
@@ -513,6 +512,30 @@ ARGO floats are autonomous robotic instruments that collect Temperature, Salinit
 The following code will give you a list of <code class="docutils literal notranslate"><span class="pre">.npy</span></code> files that you can open in the next step.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">pooch</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pooch in C:\Users\c7151096\AppData\Local\miniforge3\envs\maps\Lib\site-packages (1.8.2)
+Requirement already satisfied: platformdirs&gt;=2.5.0 in C:\Users\c7151096\AppData\Local\miniforge3\envs\maps\Lib\site-packages (from pooch) (4.3.6)
+Requirement already satisfied: packaging&gt;=20.0 in C:\Users\c7151096\AppData\Local\miniforge3\envs\maps\Lib\site-packages (from pooch) (26.2)
+Requirement already satisfied: requests&gt;=2.19.0 in C:\Users\c7151096\AppData\Local\miniforge3\envs\maps\Lib\site-packages (from pooch) (2.32.3)
+Requirement already satisfied: charset_normalizer&lt;4,&gt;=2 in C:\Users\c7151096\AppData\Local\miniforge3\envs\maps\Lib\site-packages (from requests&gt;=2.19.0-&gt;pooch) (3.4.1)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in C:\Users\c7151096\AppData\Local\miniforge3\envs\maps\Lib\site-packages (from requests&gt;=2.19.0-&gt;pooch) (3.10)
+Requirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in C:\Users\c7151096\AppData\Local\miniforge3\envs\maps\Lib\site-packages (from requests&gt;=2.19.0-&gt;pooch) (2.3.0)
+Requirement already satisfied: certifi&gt;=2017.4.17 in C:\Users\c7151096\AppData\Local\miniforge3\envs\maps\Lib\site-packages (from requests&gt;=2.19.0-&gt;pooch) (2025.4.26)
+Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[notice] A new release of pip is available: 26.0.1 -&gt; 26.3
+[notice] To update, run: python.exe -m pip install --upgrade pip
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pooch</span>
 <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span> 
 
@@ -523,25 +546,24 @@ The following code will give you a list of <code class="docutils literal notrans
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">pooch</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span> 
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://github.com/HamedAlemo/advanced-geo-python/raw/refs/heads/main/files/float_data_4901412.zip&quot;</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;pooch&#39;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;C:\\Users\\c7151096\\AppData\\Local\\pooch\\pooch\\Cache\\6d802b1e083b1a058f3fbf91228d7758-float_data_4901412.zip.unzip\\float_data\\date.npy&#39;,
+ &#39;C:\\Users\\c7151096\\AppData\\Local\\pooch\\pooch\\Cache\\6d802b1e083b1a058f3fbf91228d7758-float_data_4901412.zip.unzip\\float_data\\lat.npy&#39;,
+ &#39;C:\\Users\\c7151096\\AppData\\Local\\pooch\\pooch\\Cache\\6d802b1e083b1a058f3fbf91228d7758-float_data_4901412.zip.unzip\\float_data\\levels.npy&#39;,
+ &#39;C:\\Users\\c7151096\\AppData\\Local\\pooch\\pooch\\Cache\\6d802b1e083b1a058f3fbf91228d7758-float_data_4901412.zip.unzip\\float_data\\lon.npy&#39;,
+ &#39;C:\\Users\\c7151096\\AppData\\Local\\pooch\\pooch\\Cache\\6d802b1e083b1a058f3fbf91228d7758-float_data_4901412.zip.unzip\\float_data\\P.npy&#39;,
+ &#39;C:\\Users\\c7151096\\AppData\\Local\\pooch\\pooch\\Cache\\6d802b1e083b1a058f3fbf91228d7758-float_data_4901412.zip.unzip\\float_data\\S.npy&#39;,
+ &#39;C:\\Users\\c7151096\\AppData\\Local\\pooch\\pooch\\Cache\\6d802b1e083b1a058f3fbf91228d7758-float_data_4901412.zip.unzip\\float_data\\T.npy&#39;]
 </pre></div>
 </div>
 </div>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>The downloaded files are stored in NumPy binary format (<code class="docutils literal notranslate"><span class="pre">.npy</span></code>). To load them as NumPy arrays, use <code class="docutils literal notranslate"><span class="pre">np.load()</span></code>.
-For example:</p>
-<p><code class="docutils literal notranslate"><span class="pre">date</span> <span class="pre">=</span> <span class="pre">np.load(files[0])</span></code>
-<code class="docutils literal notranslate"><span class="pre">lat</span> <span class="pre">=</span> <span class="pre">np.load(files[1])</span></code>
-etc</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">The</span> <span class="n">downloaded</span> <span class="n">files</span> <span class="n">are</span> <span class="n">stored</span> <span class="ow">in</span> <span class="n">NumPy</span> <span class="n">binary</span> <span class="nb">format</span> <span class="p">(</span><span class="err">`</span><span class="o">.</span><span class="n">npy</span><span class="err">`</span><span class="p">)</span><span class="o">.</span> <span class="n">To</span> <span class="n">load</span> <span class="n">them</span> <span class="k">as</span> <span class="n">NumPy</span> <span class="n">arrays</span><span class="p">,</span> <span class="n">use</span> <span class="err">`</span><span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">()</span><span class="err">`</span><span class="o">.</span>
+<span class="n">For</span> <span class="n">example</span><span class="p">:</span>
+
+<span class="n">date</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">files</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">lat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">files</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+<span class="n">etc</span>
+</pre></div>
 </div>
 </section>
 <section id="load-each-data-file-as-a-numpy-array">
@@ -680,7 +702,7 @@ By Patric Simões Pereira
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Nov 16, 2026.
+  Last updated on Nov 23, 2026.
   <br/>
 </p>
   </div>

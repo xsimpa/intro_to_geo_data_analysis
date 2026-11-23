@@ -62,11 +62,10 @@
     <script data-domain="https://github.com/xsimpa/" defer="defer" src="https://plausible.oggm.org/js/script.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Assignment 04" href="Assignment_04.html" />
     <link rel="prev" title="Plotting data with matplotlib" href="01-matplotlib.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Nov 16, 2026"/>
+    <meta name="docbuild:last-update" content="Nov 23, 2026"/>
   </head>
   
   
@@ -229,7 +228,6 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="01-matplotlib.html">Plotting data with matplotlib</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Multi-dimensional data with numpy and matplotlib</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Assignment_04.html">Assignment 04</a></li>
 </ul>
 
     </div>
@@ -560,16 +558,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">3</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">import</span><span class="w"> </span><span class="nn">scipy.datasets</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># Read a sample image from scipy</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">img</span> <span class="o">=</span> <span class="n">scipy</span><span class="o">.</span><span class="n">datasets</span><span class="o">.</span><span class="n">face</span><span class="p">()</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;scipy&#39;
-</pre></div>
-</div>
+<img alt="../_images/cfaaa696e944347863636bd57000a72cfe2af584ba9e3a4227067cd67ffffd24.png" src="../_images/cfaaa696e944347863636bd57000a72cfe2af584ba9e3a4227067cd67ffffd24.png" />
 </div>
 </div>
 <p>What is <code class="docutils literal notranslate"><span class="pre">img</span></code>? Lets find out:</p>
@@ -580,12 +569,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">4</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">img</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="n">img</span><span class="o">.</span><span class="n">dtype</span><span class="p">,</span> <span class="n">img</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">img</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
-
-<span class="ne">NameError</span>: name &#39;img&#39; is not defined
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>((768, 1024, 3), dtype(&#39;uint8&#39;), np.uint8(0), np.uint8(255))
 </pre></div>
 </div>
 </div>
@@ -601,18 +585,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="n">f</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">,</span> <span class="n">ax3</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">5</span><span class="p">))</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="n">ax1</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Reds&#39;</span><span class="p">);</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">ax2</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Greens&#39;</span><span class="p">);</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="n">ax3</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">img</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">2</span><span class="p">],</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;Blues&#39;</span><span class="p">);</span>
-
-<span class="ne">NameError</span>: name &#39;img&#39; is not defined
-</pre></div>
-</div>
-<img alt="../_images/c6f8d6a1829675768236f9ebb730e0f7b812ad8184cff501abe8ffe349dd9e99.png" src="../_images/c6f8d6a1829675768236f9ebb730e0f7b812ad8184cff501abe8ffe349dd9e99.png" />
+<img alt="../_images/3aeb23801552c9fd66edf673cae434a867e29d58aef40405768570d22e90b2c0.png" src="../_images/3aeb23801552c9fd66edf673cae434a867e29d58aef40405768570d22e90b2c0.png" />
 </div>
 </div>
 <p>Matplotlib’s <a class="reference external" href="https://matplotlib.org/stable/api/_as_gen/matplotlib.axes.Axes.imshow.html#matplotlib.axes.Axes.imshow">imshow</a> understands what is meant when given 3D data with the last dimension of size 3. When given a 2D array of any type, it will map the data to a colorscale value:</p>
@@ -625,16 +598,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">6</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">data</span> <span class="o">=</span> <span class="n">img</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">0</span><span class="p">]</span>  <span class="c1"># Select the red channel</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">im</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">data</span><span class="p">);</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">plt</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">im</span><span class="p">,</span> <span class="n">orientation</span><span class="o">=</span><span class="s1">&#39;vertical&#39;</span><span class="p">);</span>
-
-<span class="ne">NameError</span>: name &#39;img&#39; is not defined
-</pre></div>
-</div>
+<img alt="../_images/0c531e5aac69853cd8e1b131affc2395f0d59528b961ee66c8e45a89e1362682.png" src="../_images/0c531e5aac69853cd8e1b131affc2395f0d59528b961ee66c8e45a89e1362682.png" />
 </div>
 </div>
 <p>Some of the things explained above might be a bit overwhelming right now. Don’t worry! We will get back to these concepts later in this unit.</p>
@@ -1193,7 +1157,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/f2dca3ee6a1055a34272f9b1b681d8b9f3a029585e5a993cd527b46170e472ef.png" src="../_images/f2dca3ee6a1055a34272f9b1b681d8b9f3a029585e5a993cd527b46170e472ef.png" />
+<img alt="../_images/16477728fd20d06ca688b47fbb197e13fa731e0a079a50a2c47f24839bd5d370.png" src="../_images/16477728fd20d06ca688b47fbb197e13fa731e0a079a50a2c47f24839bd5d370.png" />
 </div>
 </div>
 <p>Note the x and y coordinates of the plot. They to not correspond to the one we generated (how could they? <code class="docutils literal notranslate"><span class="pre">imshow</span></code> was not told about them). If you want the coordinates to show up properly, you will have to indicate them:</p>
@@ -1204,7 +1168,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/cead7b0fe8bfd747097c25028cd1345fd90a4c43eb79b2c4528ce4e3e1e19094.png" src="../_images/cead7b0fe8bfd747097c25028cd1345fd90a4c43eb79b2c4528ce4e3e1e19094.png" />
+<img alt="../_images/70a95f073776a27c55f7b186ac0ea4453c1312792f0ce52ac172990952eb809c.png" src="../_images/70a95f073776a27c55f7b186ac0ea4453c1312792f0ce52ac172990952eb809c.png" />
 </div>
 </div>
 <p>Actually, this is still wrong! The correct way is to indicate the corner coordinates, which is a bit more work and implies to know the spatial resolution of the data:</p>
@@ -1215,7 +1179,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/0ab93ae8f7c0fff2ac8dfdd8bfef69a9c93c0b437ebeb3abdd401b4d97c88707.png" src="../_images/0ab93ae8f7c0fff2ac8dfdd8bfef69a9c93c0b437ebeb3abdd401b4d97c88707.png" />
+<img alt="../_images/956cd9837ae78bda709f845d3edace8c3757882eb0237b61c2e5dd637fada929.png" src="../_images/956cd9837ae78bda709f845d3edace8c3757882eb0237b61c2e5dd637fada929.png" />
 </div>
 </div>
 </section>
@@ -1251,7 +1215,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/ad72ebb786b4444883c08b2197665f24df8268bcca85f3ca63c6bc6467f80f0b.png" src="../_images/ad72ebb786b4444883c08b2197665f24df8268bcca85f3ca63c6bc6467f80f0b.png" />
+<img alt="../_images/1ebcaa148656605b9432bfcdbe5bdf8bc28f9c195c8aff7223fe2c5585ee4795.png" src="../_images/1ebcaa148656605b9432bfcdbe5bdf8bc28f9c195c8aff7223fe2c5585ee4795.png" />
 </div>
 </div>
 <p>Note that it also takes decisions on the direction of the y-axis based on the data. This is often a good idea, but can be changed of course:</p>
@@ -1265,7 +1229,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/ea906c1026ec8c27b5f8b57765751b65a129e699328ccb1f3c434c322f32fda5.png" src="../_images/ea906c1026ec8c27b5f8b57765751b65a129e699328ccb1f3c434c322f32fda5.png" />
+<img alt="../_images/f3312fc66c7e5692a626cdfa1061f8dc5c0728f617104b8281bcf35e4998dfeb.png" src="../_images/f3312fc66c7e5692a626cdfa1061f8dc5c0728f617104b8281bcf35e4998dfeb.png" />
 </div>
 </div>
 <p>Of course, you can change aspects of the plot such as <a class="reference external" href="https://matplotlib.org/3.5.0/tutorials/colors/colormaps.html">the colormap</a> to use:</p>
@@ -1279,7 +1243,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/107996fa5d31b6efa7425dddd4f6163c91fe2805e9a4d30c11f548f97d2945ed.png" src="../_images/107996fa5d31b6efa7425dddd4f6163c91fe2805e9a4d30c11f548f97d2945ed.png" />
+<img alt="../_images/a9052475c13195c73cde95e64b00e9559ecb5cd57845ff394a132ae4bb356c57.png" src="../_images/a9052475c13195c73cde95e64b00e9559ecb5cd57845ff394a132ae4bb356c57.png" />
 </div>
 </div>
 </section>
@@ -1295,7 +1259,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/6966b25a3a11f2d68ca23f614dfdfe6d899f8e9ec5ac25f6072798ef1b3d3e62.png" src="../_images/6966b25a3a11f2d68ca23f614dfdfe6d899f8e9ec5ac25f6072798ef1b3d3e62.png" />
+<img alt="../_images/ca9a25a531d167d0af16463eaa225ede275316f405296a60d4051ac60a5004e3.png" src="../_images/ca9a25a531d167d0af16463eaa225ede275316f405296a60d4051ac60a5004e3.png" />
 </div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">contourf</span></code> fills with colors, while <code class="docutils literal notranslate"><span class="pre">contour</span></code> draws lines that can be annotated:</p>
@@ -1308,7 +1272,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/c6911c165c878ca0a5965804a1f62d419ff64be13afba5a881d5d9f7131902c4.png" src="../_images/c6911c165c878ca0a5965804a1f62d419ff64be13afba5a881d5d9f7131902c4.png" />
+<img alt="../_images/c723576d4a1fb3509233ac2f24ab369b810f6215b70bf90c1147426cb63d2cef.png" src="../_images/c723576d4a1fb3509233ac2f24ab369b810f6215b70bf90c1147426cb63d2cef.png" />
 </div>
 </div>
 </section>
@@ -1360,15 +1324,6 @@ document.write(`
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">Plotting data with matplotlib</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="Assignment_04.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Assignment 04</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -1437,7 +1392,7 @@ By Patric Simões Pereira
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on Nov 16, 2026.
+  Last updated on Nov 23, 2026.
   <br/>
 </p>
   </div>
